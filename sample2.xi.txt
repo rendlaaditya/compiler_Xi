@@ -1,0 +1,33 @@
+// compute gcd of two numbers
+// (non-recursive functions)
+
+// computes gcd of two integers
+gcd(a: int, b: int): int {
+    while (a != 0) {
+        if (a<b) {
+            b = b-a;
+        }
+        else {
+            a = a-b;
+        }
+    }
+    return b;
+}
+
+// adds one to input
+addone(a: int): int {
+    b: int;
+    b = a+1;
+    return b;
+}
+
+// main function
+main() {
+    a: int;
+    b: int;
+    c: int;
+    a = 174;
+    b = 250;
+    c = gcd(a, addone(b+1)); // => 6
+    print c;                 // implement using syscall
+}

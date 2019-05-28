@@ -1,0 +1,24 @@
+// compute the ith fibonacci number
+// (recursive functions)
+
+// compute the ith fibonacci number
+// (assume i >= 0)
+fib(i: int): int {
+    res: int;
+    res = -1;
+    if (i <= 1) {
+        res = i;
+    } else {
+        res = fib(i-1) + fib(i-2);
+    }
+    return res;
+}
+
+// main function
+main() {
+    i: int;
+    f: int;
+    i = 7;
+    f = fib(i);  // => 13
+    print f;     // implement using syscall
+}
